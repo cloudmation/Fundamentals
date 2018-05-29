@@ -13,8 +13,8 @@ public class PostOrderTraversalTest {
         root.right = new Node(3);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        PostOrderTraversal traversal = new PostOrderTraversal();
-        ArrayList<Integer> results = traversal.traverseRecursive(root);
+        BinaryTreeTraversal traversal = new PostOrderTraversal();
+        ArrayList<Integer> results = traversal.recursive(root);
         Assert.assertArrayEquals(new int[] {4, 5, 2, 6,7 ,3, 1}, Utility.convertIntegers(results));
     }
 
@@ -27,8 +27,8 @@ public class PostOrderTraversalTest {
         root.right = new Node(3);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        PostOrderTraversal traversal = new PostOrderTraversal();
-        ArrayList<Integer> results = traversal.traverseIterative(root);
+        BinaryTreeTraversal traversal = new PostOrderTraversal();
+        ArrayList<Integer> results = traversal.iterative(root);
         Assert.assertArrayEquals(new int[] {4, 5, 2, 6,7 ,3, 1}, Utility.convertIntegers(results));
     }
 }

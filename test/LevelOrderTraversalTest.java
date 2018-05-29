@@ -13,8 +13,8 @@ public class LevelOrderTraversalTest {
         root.right = new Node(3);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        LevelOrderTraversal traversal = new LevelOrderTraversal();
-        ArrayList<Integer> results = traversal.traverse(root);
+        BinaryTreeTraversal traversal = new LevelOrderTraversal();
+        ArrayList<Integer> results = traversal.iterative(root);
         Assert.assertArrayEquals(new int[] {1, 2, 3, 4, 5, 6, 7}, Utility.convertIntegers(results));
     }
 }

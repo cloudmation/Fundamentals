@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class InOrderTraversal {
-    public ArrayList<Integer> inorderIterative(Node root) {
+public class InOrderTraversal implements BinaryTreeTraversal {
+
+    @Override
+    public ArrayList<Integer> iterative(Node root) {
         if(root == null) return null;
         ArrayList<Integer> output = new ArrayList<>();
         //keep the nodes in the path that are waiting to be visited
@@ -30,7 +32,8 @@ public class InOrderTraversal {
         return output;
     }
 
-    public ArrayList<Integer> inorderRecursive(Node root) {
+    @Override
+    public ArrayList<Integer> recursive(Node root) {
         ArrayList<Integer> output = new ArrayList<>();
         inorderRecursiveHelper(root, output);
         return output;

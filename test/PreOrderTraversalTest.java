@@ -11,8 +11,8 @@ public class PreOrderTraversalTest {
         root.right = new Node(3);
         root.right.left = new Node(4);
         root.right.right = new Node(5);
-        PreOrderTraversal traversal = new PreOrderTraversal();
-        ArrayList<Integer> results = traversal.preorderRecursive(root);
+        BinaryTreeTraversal traversal = new PreOrderTraversal();
+        ArrayList<Integer> results = traversal.recursive(root);
         Assert.assertArrayEquals(new int[] {1, 2, 3, 4, 5}, Utility.convertIntegers(results));
     }
 
@@ -23,8 +23,8 @@ public class PreOrderTraversalTest {
         root.right = new Node(3);
         root.right.left = new Node(4);
         root.right.right = new Node(5);
-        PreOrderTraversal traversal = new PreOrderTraversal();
-        ArrayList<Integer> results = traversal.preorderIterative(root);
+        BinaryTreeTraversal traversal = new PreOrderTraversal();
+        ArrayList<Integer> results = traversal.iterative(root);
         Assert.assertArrayEquals(new int[] {1, 2, 3, 4, 5}, Utility.convertIntegers(results));
     }
 }

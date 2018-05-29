@@ -1,17 +1,22 @@
-import java.util.AbstractQueue;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 // BFS
-public class LevelOrderTraversal {
+public class LevelOrderTraversal implements BinaryTreeTraversal {
 
-    public ArrayList<Integer> traverse(Node root) {
+    @Override
+    public ArrayList<Integer> recursive(Node root) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Integer> iterative(Node root) {
         ArrayList<Integer> output = new ArrayList<>();
-        LinkedList<Node> nodeQueue = new LinkedList<>();
+        Queue<Node> nodeQueue = new LinkedList<>();
         nodeQueue.add(root);
         while(!nodeQueue.isEmpty()) {
-            Node temp = nodeQueue.pollFirst();
+            Node temp = nodeQueue.poll();
             output.add(temp.data);
             if(temp.left != null) {
                 nodeQueue.add(temp.left);

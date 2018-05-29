@@ -1,15 +1,17 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class PreOrderTraversal {
+public class PreOrderTraversal implements BinaryTreeTraversal{
 
-    public ArrayList<Integer> preorderRecursive(Node root) {
+    @Override
+    public ArrayList<Integer> recursive(Node root) {
         ArrayList<Integer> output = new ArrayList<>();
         preorderRecursiveHelper(root, output);
         return output;
     }
 
-    public ArrayList<Integer> preorderIterative(Node root) {
+    @Override
+    public ArrayList<Integer> iterative(Node root) {
         ArrayList<Integer> output = new ArrayList<>();
         Stack<Node> nodeStack = new Stack<Node>();
         nodeStack.push(root);

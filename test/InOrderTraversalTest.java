@@ -14,7 +14,7 @@ public class InOrderTraversalTest {
         root.right.left = new Node(4);
         InOrderTraversal traversal = new InOrderTraversal();
         ArrayList<Integer> results = traversal.inorderRecursive(root);
-        Assert.assertArrayEquals(new int[] {2,1,4,3}, convertIntegers(results));
+        Assert.assertArrayEquals(new int[] {2,1,4,3}, Utility.convertIntegers(results));
 
     }
 
@@ -27,18 +27,8 @@ public class InOrderTraversalTest {
         root.right.right = new Node(5);
         InOrderTraversal traversal = new InOrderTraversal();
         ArrayList<Integer> results = traversal.inorderIterative(root);
-        Assert.assertArrayEquals(new int[] {2,1,4,3, 5}, convertIntegers(results));
+        Assert.assertArrayEquals(new int[] {2,1,4,3, 5}, Utility.convertIntegers(results));
 
     }
 
-    public static int[] convertIntegers(List<Integer> integers)
-    {
-        int[] ret = new int[integers.size()];
-        Iterator<Integer> iterator = integers.iterator();
-        for (int i = 0; i < ret.length; i++)
-        {
-            ret[i] = iterator.next().intValue();
-        }
-        return ret;
-    }
 }

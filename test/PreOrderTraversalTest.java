@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class PreOrderTraversalTest {
     @Test
-    public void testInOrderTraversalRecursive() {
+    public void testPreOrderTraversalRecursive() {
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
@@ -17,7 +17,7 @@ public class PreOrderTraversalTest {
     }
 
     @Test
-    public void testInOrderTraversalIterative() {
+    public void testPreOrderTraversalIterative() {
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
